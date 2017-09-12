@@ -23,6 +23,53 @@ public class Car
     private double fuelEfficiency; // in units of miles per gallon
     private double fuelInTank; // in units of gallons
     
+    /*
+     * Constructor:
+     *      responsible for initializing newly created objects
+     *      invoked automatically via new operator
+     *      name of the constructor must match the name of the class
+     *      has no return type (not even void)
+     *      multiple constructors may be defined for a class
+     *      one constructor may call another constructor (with restrictions)
+     */
+    
+    /**
+     * Default constructor for the Car class.
+     *      Initializes the fuel efficiency to 30 mpg.
+     */
+    public Car()
+    {
+        this.fuelEfficiency = 30;
+        this.fuelInTank = 0;
+    }
+    
+    /**
+     * Constructs a new Car object with the specified inital fuel efficiency
+     * 
+     * @param initialFuelEfficiency the initial fuel efficiency, in miles per 
+     *                              gallon, of this new car
+     */
+    public Car( double initialFuelEfficiency )
+    {
+        /*
+         * If the parameter was named fuelEfficiency, it would "shadow" the
+         *      instance variable fuelEfficiency.
+         * Local and parameter variables "shadow" instance variables of
+         *      the same name. In this code, fuelEfficiency would refer to
+         *      the parameter and not the instance variable.
+         *      
+         * To refer to the instance variable, use "this", which is
+         *      a reserved word that references the current object
+         *      (like self in Python)
+         *      
+         * Mr. Schmit thinks it is good practice to use "this" almost always
+         */
+        
+        fuelEfficiency = 7;
+        
+        this.fuelEfficiency = initialFuelEfficiency;
+        this.fuelInTank = 0;
+    }
     
     /*
      * When defing a method, specify:
@@ -39,7 +86,7 @@ public class Car
      */
     public void drive(double distance)
     {
-        
+        this.fuelInTank -= (distance / this.fuelEfficiency );
     }
 
     
@@ -50,6 +97,7 @@ public class Car
      */
     public void addGas(double amount)
     {
+        this.fuelInTank += amount;
     }
     
     /**
@@ -59,6 +107,6 @@ public class Car
      */
     public double getGasInTank()
     {
-        return 0;
+        return this.fuelInTank;
     }
 }
