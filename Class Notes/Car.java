@@ -86,7 +86,7 @@ public class Car
      */
     public void drive(double distance)
     {
-        this.fuelInTank -= (distance / this.fuelEfficiency );
+        this.fuelInTank -= (distance / this.fuelEfficiency);
     }
 
     
