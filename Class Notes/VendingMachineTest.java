@@ -45,7 +45,7 @@ public class VendingMachineTest
     {
         VendingMachine testVendingMachine = new VendingMachine();
         int amount = testVendingMachine.getCanCount();
-        assertEquals(0,amount);
+        assertEquals(10,amount);
     }
     
     @Test
@@ -62,7 +62,7 @@ public class VendingMachineTest
         VendingMachine testVendingMachine = new VendingMachine();
         testVendingMachine.fillUp(10);
         int amount = testVendingMachine.getCanCount();
-        assertEquals(10,amount);
+        assertEquals(20,amount);
         
     }
     

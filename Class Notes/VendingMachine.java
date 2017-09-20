@@ -4,7 +4,6 @@
  * 
  * Methods:
  *      - Insert Token
- *      - Drop can
  *      - Fill up with more cans
  *      - Number of Tokens
  *      - Number of Cans
