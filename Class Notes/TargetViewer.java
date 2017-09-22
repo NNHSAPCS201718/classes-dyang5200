@@ -8,12 +8,10 @@
  *      Classes: Target, TargetComponent, and Target Viewer
  * 
  */
-import java.awt.Graphics2D;
-import java.awt.geom.Ellipse2D;
 import javax.swing.JFrame;
-import javax.swing.JComponent;
+
 /**
- * A target.
+ * Creates the frame to view the target.
  */
 
 public class TargetViewer
@@ -25,18 +23,9 @@ public class TargetViewer
         frame.setTitle("Target");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        frame.setVisible(true);
-    }
-    /**
-     * Draws the target
-     * @param g2
-     */
-    
-    public void draw(Graphics2D g2)
-    {
-        //The first black circle
-        Ellipse2D.Double blackOne = new Ellipse2D.Double(50,50,30,30);
+        TargetComponent component = new TargetComponent();
+        frame.add(component);
         
-        g2.draw(blackOne);
+        frame.setVisible(true);
     }
 }
