@@ -7,11 +7,11 @@ import java.util.Scanner;
  */
 public class RectangleCalculator
 {
-    double height;
-    double width;
-    double area;
-    double perimeter;
-    double diagonalLength;
+    private double height;
+    private double width;
+    private double area;
+    private double perimeter;
+    private double diagonalLength;
     
     public RectangleCalculator(double initialHeight, double initialWidth)
     {
@@ -33,18 +33,19 @@ public class RectangleCalculator
     
     public double getDiagonalLength()
     {
-        
+        this.diagonalLength = Math.sqrt(Math.pow(height,2) + Math.pow(width,2));
         return diagonalLength;
     }
     
-    // public string toString()
+    // public void toString()
     // {
-        // System.out.println("The rectangle's height is " + height +
-            // " and its width is " + width + ".");
-        // System.out.println("The rectangle's area is " + area +
-            // " and its perimeter is " + perimeter + " and its diagonal length is "
-            // + diagonalLength + ".");
+        // System.out.println("The rectangle's height is " + height + "" +
+            // " and its width is " + width + "" + ".");
+        // System.out.println("The rectangle's area is " + area + "" +
+            // " and its perimeter is " + perimeter + "" + " and its diagonal length is "
+            // + diagonalLength + "" + ".");
     // }
+    
     public static void main(String[] args)
     {
         Scanner s = new Scanner(System.in);
