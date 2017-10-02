@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AvgOfThree
+public class ScannerNotes
 {
    public static void main (String[] args)
    {

@@ -109,4 +109,17 @@ public class Car
     {
         return this.fuelInTank;
     }
+    
+    
+    /**
+     * Returns a String for the state of this car
+     * 
+     * @returns a String for the state of this car
+     */
+    public String toString()
+    {
+        String str = "fuel efficiency: " + this.fuelEfficiency +
+            "; fuel in tank: " + this.fuelInTank;
+        return str;
+    }
 }
