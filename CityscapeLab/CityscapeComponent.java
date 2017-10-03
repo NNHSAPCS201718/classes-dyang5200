@@ -6,8 +6,8 @@ import javax.swing.JComponent;
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
  *  cityscape to these object.
  * 
- * @author @gcschmit
- * @version 18 July 2014
+ * @author @Danielle Yang
+ * @version 3 October 2017
  */
 public class CityscapeComponent extends JComponent
 {
@@ -30,8 +30,22 @@ public class CityscapeComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         
         // invoke the draw method on each object in your Cityscape
-        // ...
         
+        // Draws the sun.
+        Moon moon1 = new Moon();
+        moon1.draw(g2);
+        
+        // Draws a building.
+        Building building1 = new Building();
+        building1.draw(g2);
+        
+        /*
+         * Objects I want:
+         *      - Moon moving across sky
+         *      - Several Buildings
+         *          - Lights flashing in buildings
+         *      - Stars twinkling
+         */
         
     }
     

@@ -19,7 +19,7 @@ public class RectangleCalculator
     public double getArea()
     {
         double area;
-        area = height * width;
+        area = this.height * this.width;
         return area;
     }
     
@@ -39,11 +39,11 @@ public class RectangleCalculator
     
     public String toString()
     {
-        String str = ("The rectangle's height is " + height + "" +
-            " and its width is " + width + "" + ".");
-        String str2 = ("\nThe rectangle's area is " + getArea() + "" +
-            " and its perimeter is " + getPerimeter() + "" + " and its diagonal length is "
-            + getDiagonalLength() + "" + ".");
+        String str = ("The rectangle's height is " + this.height + "" +
+            " and its width is " + this.width + "" + ".");
+        String str2 = ("\nThe rectangle's area is " + this.getArea() + "" +
+            " and its perimeter is " + this.getPerimeter() + "" + " and its diagonal length is "
+            + this.getDiagonalLength() + "" + ".");
         return str + str2;
     }
     
