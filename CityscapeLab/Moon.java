@@ -8,25 +8,27 @@ import java.awt.Color;
  * @author @Danielle Yang
  * @version 3 October 2017
  */
-public class Sun
+public class Moon
 {
     /**
-     * Defines instance variables for the Sun object
+     * Defines instance variables for the Moon object
      */
     int x;
     int y;
     int radius;
+    Color color;
     
     /**
-     * Constructs a new Sun objects with specified x, y, and radius values.
+     * Constructs a new Moon objects with specified x, y, and radius values.
      * 
      * @param x1 the x value, y1 the y value, radius1 the radius of the new sun
      */
-    public Sun( int x1, int y1, int radius1 )
+    public Moon( int x1, int y1, int radius1, Color color1)
     {
         this.x = x1;
         this.y = y1;
         this.radius = radius1;
+        this.color = color1;
     }
     
     /**
@@ -35,9 +37,9 @@ public class Sun
      */
     public void draw(Graphics2D g2)
     {
-        Ellipse2D.Double sun = new Ellipse2D.Double(x,y,radius,radius);
-        g2.setColor(Color.YELLOW);
-        g2.draw(sun);
-        g2.fill(sun);
+        Ellipse2D.Double moon = new Ellipse2D.Double(x,y,radius,radius);
+        g2.setColor(color);
+        g2.draw(moon);
+        g2.fill(moon);
     }
 }
