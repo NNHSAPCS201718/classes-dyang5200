@@ -11,13 +11,25 @@ import javax.swing.JComponent;
  */
 public class CityscapeComponent extends JComponent
 {
-    // define the objects in your Cityscape as instance variables
-    // ...
+    // Define instance variables:
+    
+    Sun sun = new Sun(600,40,75);
+    Building building1 = new Building(200,300,75,150);
+    // Building building2 = new Building(100,400,75,300);
+    // Building building3 = new Building(0,400,75,300);
+    // Building building4 = new Building(300,400,75,300);
+        
+    // Building sky = new Building(0,0,800,600);
+    
+    Building road = new Building(0,450,800,150);
+    // Building roadLine = new Building(200,400,75,300);
+    
+    public CityscapeComponent()
+    {
+        
     
     
-    
-    // define the CityscapeComponent contructor and intiailize all instance variables
-    // ...
+    }
     
     
     /**
@@ -30,14 +42,13 @@ public class CityscapeComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         
         // invoke the draw method on each object in your Cityscape
-        
-        // Draws the sun.
-        Moon moon1 = new Moon();
-        moon1.draw(g2);
+        sun.draw(g2);
         
         // Draws a building.
-        Building building1 = new Building();
         building1.draw(g2);
+        
+        // Draws the road.
+        road.draw(g2);
         
         /*
          * Objects I want:
