@@ -33,6 +33,17 @@ public class CityscapeComponent extends JComponent
     
     private Building sky;
     
+    private Car car1;
+    private Car car2;
+    
+    private Star star1;
+    private Star star2;
+    private Star star3;
+    private Star star4;
+    private Star star5;
+    private Star star6;
+    private Star shootingStar;
+    
     /**
      * Constructs a Cityscape
      */
@@ -55,6 +66,17 @@ public class CityscapeComponent extends JComponent
         roadLine4 = new Building(630,505,100,15, Color.YELLOW);
         
         sky = new Building(0,0,800,600, Color.BLUE);
+        
+        car1 = new Car(0,525,Color.WHITE);
+        car2 = new Car(800,475,Color.RED);
+        
+        star1 = new Star(30,30);
+        star2 = new Star(90,200);
+        star3 = new Star(400,50);
+        star4 = new Star(330,70);
+        star5 = new Star(580,200);
+        star6 = new Star(710,300);
+        shootingStar = new Star(450,150);
     
     }
     
@@ -89,6 +111,18 @@ public class CityscapeComponent extends JComponent
         roadLine3.draw(g2);
         roadLine4.draw(g2);
         
+        // Draws the cars.
+        car1.draw(g2);
+        car2.draw(g2);
+        
+        // Draws the stars.
+        star1.draw(g2);
+        star2.draw(g2);
+        star3.draw(g2);
+        star4.draw(g2);
+        star5.draw(g2);
+        star6.draw(g2);
+        shootingStar.draw(g2);
     }
     
     /**
@@ -97,11 +131,12 @@ public class CityscapeComponent extends JComponent
      */
     public void nextFrame()
     {
-        // update the objects in the cityscape so they are animated
-        // ...
-        
-        
-        
+        car1.moveCarRight();
+        car2.moveCarLeft();
+        moon.moveMoon();
+        crescent.moveMoon();
+        shootingStar.shootingStar();
+
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         //  do not explicitly invoke the paintComponent method
         repaint();

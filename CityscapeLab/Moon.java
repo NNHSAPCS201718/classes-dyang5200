@@ -32,7 +32,21 @@ public class Moon
     }
     
     /**
-     * Draws a sun object.
+     * Method to move the moon across the sky.
+     */
+    public void moveMoon()
+    {
+        // this.x -= 10;
+        // while (this.x > 500) {
+            // this.y -= 5;
+        // }
+        // while (this.x <= 500) {
+            // this.y += 5;
+        // }
+    }
+    
+    /**
+     * Draws a moon object.
      * @param g2 the graphics context
      */
     public void draw(Graphics2D g2)
