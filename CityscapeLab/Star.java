@@ -6,16 +6,24 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Star here.
+ * This class models a star.
  *
  * @author dyang5200
  * @version 10 October 2017
  */
 public class Star
 {
+    /**
+     * Defines instance variables for Star object.
+     */
     private int x;
     private int y;
     
+    /**
+     * Constructs a new Star object with specified x and y values
+     * 
+     * @param x1 the x value, y1 the y value
+     */
     public Star(int x1, int y1)
     {
         this.x = x1;
@@ -28,10 +36,12 @@ public class Star
     public void shootingStar()
     {
         this.x -= 10;
-        while (this.x > 300) {
+        if(this.x >= 200)
+        {
             this.y -= 5;
         }
-        while (this.x <= 300) {
+        else if(this.x <= 200)
+        {
             this.y += 5;
         }
     }

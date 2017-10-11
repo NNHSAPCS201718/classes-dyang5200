@@ -6,7 +6,7 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Class for car object.
+ * This class models a car.
  *
  * @author dyang5200
  * @version 10 October 2017
@@ -18,9 +18,8 @@ public class Car
     private Color carColor;
     
     /**
-     * Constructs a car.
-     * @param x1 the x-coordinate of the top-left corner
-     * @param y1 the y-coordinate of the top-left corner
+     * Constructs a new Star object with specified x, y, and color1 values
+     * @param x1 the x value, y1 the y value, and color1 the color of the car.
      */
     public Car(int x1, int y1, Color color1)
     {

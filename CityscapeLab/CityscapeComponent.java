@@ -45,7 +45,8 @@ public class CityscapeComponent extends JComponent
     private Star shootingStar;
     
     /**
-     * Constructs a Cityscape
+     * Constructs a Cityscape. 
+     * Includes objects: Moon, Buildings, Roads, Sky, Car, and Stars.
      */
     public CityscapeComponent()
     {
@@ -67,7 +68,7 @@ public class CityscapeComponent extends JComponent
         
         sky = new Building(0,0,800,600, Color.BLUE);
         
-        car1 = new Car(0,525,Color.WHITE);
+        car1 = new Car(0,525,Color.MAGENTA);
         car2 = new Car(800,475,Color.RED);
         
         star1 = new Star(30,30);
@@ -79,6 +80,7 @@ public class CityscapeComponent extends JComponent
         shootingStar = new Star(450,150);
     
     }
+    
     
     /**
      * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
@@ -133,8 +135,6 @@ public class CityscapeComponent extends JComponent
     {
         car1.moveCarRight();
         car2.moveCarLeft();
-        moon.moveMoon();
-        crescent.moveMoon();
         shootingStar.shootingStar();
 
         // request that the Java Runtime repaints this component by invoking its paintComponent method

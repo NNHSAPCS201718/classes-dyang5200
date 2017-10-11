@@ -3,9 +3,9 @@ import java.awt.geom.Ellipse2D;
 import java.awt.Color;
 
 /**
- * Class for sun object.
+ * This class models a moon.
  *
- * @author @Danielle Yang
+ * @author dyang5200
  * @version 3 October 2017
  */
 public class Moon
@@ -19,9 +19,10 @@ public class Moon
     Color color;
     
     /**
-     * Constructs a new Moon objects with specified x, y, and radius values.
+     * Constructs a new Moon object with specified x, y, radius, and color values.
      * 
-     * @param x1 the x value, y1 the y value, radius1 the radius of the new sun
+     * @param x1 the x value, y1 the y value, radius1 the radius,
+     *      and color1 the color of the new sun
      */
     public Moon( int x1, int y1, int radius1, Color color1)
     {
@@ -37,12 +38,7 @@ public class Moon
     public void moveMoon()
     {
         // this.x -= 10;
-        // while (this.x > 500) {
-            // this.y -= 5;
-        // }
-        // while (this.x <= 500) {
-            // this.y += 5;
-        // }
+        // this.y -= 5;
     }
     
     /**

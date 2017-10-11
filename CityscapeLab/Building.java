@@ -5,9 +5,9 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Class for building object.
+ * This class models a building.
  *
- * @author @Danielle Yang
+ * @author dyang5200
  * @version 3 October 2017
  */
 public class Building
@@ -22,10 +22,10 @@ public class Building
     Color color;
     
     /**
-     * Constructs a new Building object with specified x, y, length, and width values.
+     * Constructs a new Building object with specified x, y, length, width, and color values.
      * 
-     * @param x1 the x value, y1 the y value, length1 the length, width1 the width
-     *          of the new Building
+     * @param x1 the x value, y1 the y value, length1 the length, width1,
+     *          and color1 the color of the new Building
      */
     public Building( int x1, int y1, int length1, int width1, Color color1)
     {
