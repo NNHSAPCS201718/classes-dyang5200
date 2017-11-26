@@ -23,7 +23,7 @@ public class CityscapeComponent extends JComponent
     private Building building4;
     private Building building5;
     private Building building6;
-    private Building building7;
+    private Building building7; 
     
     private Building road;
     private Building roadLine1;
