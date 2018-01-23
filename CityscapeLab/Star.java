@@ -62,8 +62,9 @@ public class Star
         Line2D.Double line3 = new Line2D.Double(pt2, pt5);
         Line2D.Double line4 = new Line2D.Double(pt5, pt3);
         Line2D.Double line5 = new Line2D.Double(pt3, pt1);
+        Color myYellow = new Color(255,255,224);
         
-        g2.setColor(Color.YELLOW);
+        g2.setColor(myYellow);
         g2.draw(line1);
         g2.draw(line2);
         g2.draw(line3);

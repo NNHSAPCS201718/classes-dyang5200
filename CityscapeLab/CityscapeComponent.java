@@ -44,32 +44,57 @@ public class CityscapeComponent extends JComponent
     private Star star6;
     private Star shootingStar;
     
+    private Snow snow1;
+    private Snow snow2;
+    private Snow snow3;
+    private Snow snow4;
+    private Snow snow5;
+    private Snow snow6;
+    private Snow snow7;
+    private Snow snow8;
+    
     /**
      * Constructs a Cityscape. 
      * Includes objects: Moon, Buildings, Roads, Sky, Car, and Stars.
      */
     public CityscapeComponent()
     {
-        moon = new Moon(600,40,75, Color.YELLOW);
-        crescent = new Moon(600,40,50, Color.BLUE);
-        building1 = new Building(200,200,75,250, Color.GRAY);
-        building2 = new Building(100,400,75,150,Color.GRAY);
-        building3 = new Building(10,330,75,150,Color.GRAY);
-        building4 = new Building(320,280,75,170,Color.GRAY);
-        building5 = new Building(400,250,75,200,Color.GRAY);
-        building6 = new Building(500,350,75,200,Color.GRAY);
-        building7 = new Building(610,280,75,200,Color.GRAY);
+        Color myGray = new Color(205,201,201);
+        Color mySky = new Color(135,206,250);
+        Color myYellow = new Color(255,255,224);
+        Color myPurple = new Color(147,112,219);
+        Color myGreen = new Color(10,250,154);
         
-        road = new Building(0,450,800,150, Color.GRAY);
+        moon = new Moon(600,40,75, myYellow);
+        crescent = new Moon(600,40,50, mySky);
+        
+        building1 = new Building(200,200,75,250, myGray);
+        building2 = new Building(100,400,75,150,myGray);
+        building3 = new Building(10,330,75,150,myGray);
+        building4 = new Building(320,280,75,170,myGray);
+        building5 = new Building(400,250,75,200,myGray);
+        building6 = new Building(500,350,75,200,myGray);
+        building7 = new Building(610,280,75,200,myGray);
+        
+        road = new Building(0,450,800,150, myGray);
         roadLine1 = new Building(60,505,100,15, Color.YELLOW);
         roadLine2 = new Building(250,505,100,15, Color.YELLOW);
         roadLine3 = new Building(440,505,100,15, Color.YELLOW);
         roadLine4 = new Building(630,505,100,15, Color.YELLOW);
         
-        sky = new Building(0,0,800,600, Color.BLUE);
+        sky = new Building(0,0,800,600, mySky);
         
-        car1 = new Car(0,525,Color.MAGENTA);
-        car2 = new Car(800,475,Color.RED);
+        snow1 = new Snow(32,12);
+        snow2 = new Snow(111,59);
+        snow3 = new Snow(189,111);
+        snow4 = new Snow(299,67);
+        snow5 = new Snow(354,89);
+        snow6 = new Snow(467,200);
+        snow7 = new Snow(555,112);
+        snow8 = new Snow(605,14);
+        
+        car1 = new Car(0,525,myPurple);
+        car2 = new Car(800,475,myGreen);
         
         star1 = new Star(30,30);
         star2 = new Star(90,200);
@@ -125,7 +150,22 @@ public class CityscapeComponent extends JComponent
         star5.draw(g2);
         star6.draw(g2);
         shootingStar.draw(g2);
+        
+        //Draws the snowflakes.
+        for(int i = 0; i<100; i++)
+        {
+            
+        }
+        snow1.draw(g2);
+        snow2.draw(g2);
+        snow3.draw(g2);
+        snow4.draw(g2);
+        snow5.draw(g2);
+        snow6.draw(g2);
+        snow7.draw(g2);
+        snow8.draw(g2);
     }
+    
     
     /**
      * Animate the cityscape by updating the objects such that they appear to be animated when they are next drawn.
@@ -133,6 +173,14 @@ public class CityscapeComponent extends JComponent
      */
     public void nextFrame()
     {
+        snow1.snowFall();
+        snow2.snowFall();
+        snow3.snowFall();
+        snow4.snowFall();
+        snow5.snowFall();
+        snow6.snowFall();
+        snow7.snowFall();
+        snow8.snowFall();
         car1.moveCarRight();
         car2.moveCarLeft();
         shootingStar.shootingStar();
