@@ -14,21 +14,15 @@ dependency4.type=UsesDependency
 dependency5.from=CityscapeComponent
 dependency5.to=Star
 dependency5.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-=======
 dependency6.from=CityscapeComponent
 dependency6.to=Snow
 dependency6.type=UsesDependency
-editor.fx.0.height=1010
-editor.fx.0.width=816
-editor.fx.0.x=827
->>>>>>> f5bd331b4c253ddc4739da0e159c58a5bc07552f
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=103
-objectbench.width=452
+objectbench.width=267
 package.divider.horizontal=0.6008771929824561
 package.divider.vertical=0.7193877551020408
 package.editor.height=275
