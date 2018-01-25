@@ -1,7 +1,6 @@
 Unit 2: Classes
 ============
 
-*Standard 3 - Understand, create, and apply classes in programs*
-
-Projects for Unit 2 (Chapters 3-4)
+Cityscape
+This program creates a Java graphical application that displays a cityscape. I designed and animated a cityscape, and I wrote classes for moon, building, car, and star objects. 
 
